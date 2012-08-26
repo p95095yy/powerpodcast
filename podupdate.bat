@@ -1,5 +1,7 @@
+@echo off
+
 echo start %time%
-cd /D %~dp0
+pushd %~dp0
 
 powershell .\podcast.ps1 http://www.tbsradio.jp/ijuin/rss.xml
 powershell .\podcast.ps1 http://www.tbsradio.jp/bakusho/rss.xml
@@ -12,3 +14,5 @@ powershell .\podcast.ps1 http://www.nhk.or.jp/r-asa/podcast/life.xml
 powershell .\podcast.ps1 http://www.nhk.or.jp/r-asa/podcast/business.xml
 
 echo end %time%
+
+popd
