@@ -12,19 +12,19 @@ if(Test-Path $PodFolder){
 
 switch($Args[0]){
 	"init" {
-		echo タスクスケジューラで定期的に動作するようにして下さい。
+		echo タスクスケジューラで、podupdate.bat が定期的に動作するようにして下さい。
 		echo また、環境変数のpathにpod.batのフォルダを指定しておくと、どの場所からでも podコマンド が実行できて便利です。
 		Taskschd.msc
 		control sysdm.cpl
 	}
 	"help"  {
-		echo "pod [サブコマンド]"
+		echo "pod <サブコマンド>"
 		echo "help: このドキュメントを表示"
 		echo "init: 初期設定を行う"
-		echo "open: 保存先をひらく"
-		echo "dir:  保存先のファイルを列挙"
+		echo "open: podcastの保存先をひらく"
+		echo "dir:  保存しているpodcastを列挙"
 		echo "play: 保存先のファイルを再生"
-		echo "[rss url]: 指定URLのPodcantの最新の取得"
+		echo "<rss url>: 指定URLのPodcantの最新の取得"
 	}
 	"open"  {
 		Invoke-Item $PodFolder; break}
